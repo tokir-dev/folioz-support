@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Folioz Support</title>
+  <meta name="description" content="Support page for Folioz — a clean personal ledger built on double-entry." />
+  <style>
+    :root{
+      --bg:#fafafa; --card:#ffffff; --text:#111111; --muted:#555555;
+      --border:#e6e6e8; --link:#1b5cff; --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0b0c; --card:#141416; --text:#f5f5f7; --muted:#b0b0b5;
+        --border:#2a2a2e; --link:#7aa2ff; --shadow:0 10px 30px rgba(0,0,0,.35);
+      }
+    }
+    body{
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width: 960px; margin: 0 auto; padding: 28px 18px 64px; }
+    header{ padding: 12px 0 18px; }
+    .brand{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg, rgba(27,92,255,.18), rgba(27,92,255,.04));
+      border:1px solid var(--border);
+    }
+    h1{ margin:0; font-size: 28px; letter-spacing:-.02em; }
+    .tagline{ margin:6px 0 0; color:var(--muted); }
+    nav{
+      margin-top:16px; display:flex; flex-wrap:wrap; gap:10px;
+    }
+    nav a{
+      padding:8px 12px; border:1px solid var(--border); border-radius:999px; background:var(--card);
+      box-shadow: var(--shadow);
+      font-size: 14px;
+    }
+    .grid{ display:grid; grid-template-columns: 1fr; gap: 14px; margin-top:18px; }
+    @media (min-width: 860px){ .grid{ grid-template-columns: 1.2fr .8fr; } }
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px;
+      box-shadow: var(--shadow);
+    }
+    h2{ margin:0 0 10px; font-size:18px; letter-spacing:-.01em; }
+    h3{ margin:14px 0 6px; font-size:15px; letter-spacing:-.01em; }
+    .muted{ color:var(--muted); }
+    .kv{ display:grid; grid-template-columns: 120px 1fr; gap:10px; margin-top:10px; }
+    .kv div{ padding:8px 0; border-top:1px dashed var(--border); }
+    .kv div:nth-child(-n+2){ border-top:none; }
+    .pill{
+      display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px;
+      background:rgba(127,127,127,.08); font-size:12px; color:var(--muted);
+    }
+    details{
+      border-top:1px solid var(--border);
+      padding:12px 0;
+    }
+    details:first-of-type{ border-top:none; }
+    summary{
+      cursor:pointer; font-weight:600; letter-spacing:-.01em;
+    }
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; }
+    code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; font-size: .95em; }
+    .note{ margin-top:10px; padding:10px 12px; border:1px solid var(--border); border-radius:12px; background:rgba(127,127,127,.06); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Folioz Support</h1>
+          <div class="tagline">A clean personal ledger, built on double-entry.</div>
+        </div>
+      </div>
+      <nav aria-label="Page navigation">
+        <a href="#getting-started">Getting Started</a>
+        <a href="#faq">FAQ</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <section class="card" id="getting-started">
+        <h2>Getting Started</h2>
+        <p class="muted">
+          Folioz helps you track cash, credit, and investments using a simple, double-entry ledger.
+        </p>
+
+        <h3>Quick tips</h3>
+        <ul>
+          <li>Create accounts (Bank, Cash, Credit) and start recording transactions.</li>
+          <li>Use <span class="pill">Journal</span> to review entries, and <span class="pill">Reports</span> to see your financial position.</li>
+          <li>If you track investments, add instruments and check <span class="pill">Unrealized P/L</span>.</li>
+        </ul>
+
+        <h3>Import / Export</h3>
+        <p>
+          You can move your data in and out of the app using structured files (e.g., JSON), so your ledger stays portable.
+        </p>
+        <div class="note">
+          <strong>Tip:</strong> Keep a periodic export as a backup, especially before major updates or device changes.
+        </div>
+      </section>
+
+      <aside class="card" id="contact">
+        <h2>Contact</h2>
+        <p class="muted">Need help? Reach out and include your app version and device model.</p>
+
+        <div class="kv" role="list">
+          <div role="listitem"><strong>Email</strong></div>
+          <div role="listitem">
+            <a href="mailto:tokir.dev@example.com">tokir.dev@example.com</a>
+            <div class="muted" style="margin-top:4px;">(Replace with your real support email)</div>
+          </div>
+
+          <div role="listitem"><strong>Response</strong></div>
+          <div role="listitem">Typically within a few business days.</div>
+        </div>
+
+        <h3 style="margin-top:16px;">Links</h3>
+        <ul>
+          <li><a href="PRIVACY_POLICY_URL_HERE" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+          <li><a href="USER_PRIVACY_CHOICES_URL_HERE" target="_blank" rel="noreferrer">User Privacy Choices</a> <span class="muted">(optional)</span></li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="card" id="faq" style="margin-top:14px;">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>How do I record a typical expense?</summary>
+        <div class="muted" style="margin-top:8px;">
+          Use double-entry: debit an expense account (e.g., <code>Food</code>) and credit <code>Cash</code> or your credit card account.
+        </div>
+      </details>
+
+      <details>
+        <summary>How does credit card tracking work?</summary>
+        <div class="muted" style="margin-top:8px;">
+          Record purchases as expenses credited to your card account. When you pay the bill, debit the card account and credit <code>Bank</code>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I import/export my data?</summary>
+        <div class="muted" style="margin-top:8px;">
+          Yes. Folioz supports structured import/export (such as JSON) to keep your ledger portable and reusable.
+        </div>
+      </details>
+
+      <details>
+        <summary>Does the app use iCloud?</summary>
+        <div class="muted" style="margin-top:8px;">
+          iCloud sync is optional. If enabled, your data is synchronized via Apple iCloud. The developer does not access your iCloud data.
+        </div>
+      </details>
+
+      <details>
+        <summary>Why do I see ads?</summary>
+        <div class="muted" style="margin-top:8px;">
+          The free version may show ads provided by Google AdMob. You can remove ads by purchasing the premium option if available in the app.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I restore purchases?</summary>
+        <div class="muted" style="margin-top:8px;">
+          Open Settings in the app and use <code>Restore Purchases</code>. Ensure you’re signed in with the same Apple ID used to purchase.
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="privacy" style="margin-top:14px;">
+      <h2>Privacy</h2>
+      <p class="muted">
+        Folioz is designed to keep your personal finance data under your control. Most data is stored locally on your device.
+        Third-party services (e.g., ads) may collect limited device data for their own purposes.
+      </p>
+      <ul>
+        <li>Read the full policy: <a href="PRIVACY_POLICY_URL_HERE" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+        <li>Manage privacy requests (optional): <a href="USER_PRIVACY_CHOICES_URL_HERE" target="_blank" rel="noreferrer">User Privacy Choices</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Folioz. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
