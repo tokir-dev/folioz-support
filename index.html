@@ -6,7 +6,7 @@
   <title>Folioz Support</title>
   <meta name="description" content="Support page for Folioz — a clean personal ledger built on double-entry." />
   <link rel="apple-touch-icon" href="Assets/Icon-iOS-Default-1024x1024@1x.png">
-  <link rel="icon" type="image/png" sizes="1024x1024" href="Assets/Icon-iOS-Default-1024x1024@1x_no_alpha.png">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="Assets/Icon-iOS-Default-1024x1024@1x.png">
   <style>
     :root{
       --bg:#fafafa; --card:#ffffff; --text:#111111; --muted:#555555;
@@ -25,10 +25,24 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
     .wrap{ max-width: 960px; margin: 0 auto; padding: 28px 18px 64px; }
-    header{ padding: 12px 0 18px; }
+    header{ padding: 12px 0 18px; position: relative; }
     .brand{ display:flex; gap:14px; align-items:center; }
+    .lang-switcher{
+      position: absolute; top: 0; right: 0;
+      display: flex; gap: 6px; background: var(--card); border: 1px solid var(--border);
+      border-radius: 999px; padding: 4px; box-shadow: var(--shadow);
+    }
+    .lang-btn{
+      padding: 6px 12px; border: none; border-radius: 999px; background: transparent;
+      color: var(--muted); cursor: pointer; font-size: 13px; font-weight: 500;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover{ background: rgba(127,127,127,.1); }
+    .lang-btn.active{ background: var(--link); color: #fff; }
     .logo{
-      width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg, rgba(27,92,255,.18), rgba(27,92,255,.04));
+      width:44px; height:44px; border-radius:12px;
+      background-image: url('Assets/Icon-iOS-Default-1024x1024@1x.png');
+      background-size: cover; background-position: center;
       border:1px solid var(--border);
     }
     h1{ margin:0; font-size: 28px; letter-spacing:-.02em; }
@@ -73,6 +87,10 @@
 <body>
   <div class="wrap">
     <header>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="ja">日本語</button>
+      </div>
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <div>
@@ -189,6 +207,240 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 言語設定の検出と多言語対応
+    const translations = {
+      en: {
+        title: "Folioz Support",
+        tagline: "A clean personal ledger, built on double-entry.",
+        nav: {
+          gettingStarted: "Getting Started",
+          faq: "FAQ",
+          privacy: "Privacy",
+          contact: "Contact"
+        },
+        gettingStarted: {
+          title: "Getting Started",
+          intro: "Folioz helps you track cash, credit, and investments using a simple, double-entry ledger.",
+          quickTips: "Quick tips",
+          tip1: "Create accounts (Bank, Cash, Credit) and start recording transactions.",
+          tip2: "Use",
+          journal: "Journal",
+          toReview: "to review entries, and",
+          reports: "Reports",
+          toSee: "to see your financial position.",
+          tip3: "If you track investments, add instruments and check",
+          unrealized: "Unrealized P/L",
+          importExport: "Import / Export",
+          importExportText: "You can move your data in and out of the app using structured files (e.g., JSON), so your ledger stays portable.",
+          noteTitle: "Tip:",
+          noteText: "Keep a periodic export as a backup, especially before major updates or device changes."
+        },
+        contact: {
+          title: "Contact",
+          intro: "Need help? Reach out and include your app version and device model.",
+          email: "Email",
+          response: "Response",
+          responseText: "Typically within a few business days.",
+          links: "Links",
+          privacyPolicy: "Privacy Policy",
+          privacyPolicyUrl: "https://docs.google.com/document/d/19E-hPuWcNNPxPwXKy2aby2QfKth3tE-zFWyCbAVSXbM/edit?usp=drivesdk"
+        },
+        faq: {
+          title: "FAQ",
+          q1: "How do I record a typical expense?",
+          a1: "Use double-entry: debit an expense account (e.g., Food) and credit Cash or your credit card account.",
+          q2: "How does credit card tracking work?",
+          a2: "Record purchases as expenses credited to your card account. When you pay the bill, debit the card account and credit Bank.",
+          q3: "Can I import/export my data?",
+          a3: "Yes. Folioz supports structured import/export (such as JSON) to keep your ledger portable and reusable.",
+          q4: "Does the app use iCloud?",
+          a4: "iCloud sync is optional. If enabled, your data is synchronized via Apple iCloud. The developer does not access your iCloud data.",
+          q5: "How do I restore purchases?",
+          a5: "Open Settings in the app and use Restore Purchases. Ensure you're signed in with the same Apple ID used to purchase."
+        },
+        privacy: {
+          title: "Privacy",
+          intro: "Folioz is designed to keep your personal finance data under your control. Most data is stored locally on your device. Third-party services (e.g., ads) may collect limited device data for their own purposes.",
+          readFull: "Read the full policy:"
+        },
+        footer: "Folioz. All rights reserved."
+      },
+      ja: {
+        title: "Folioz サポート",
+        tagline: "複式簿記に基づくシンプルな個人向け帳簿アプリ",
+        nav: {
+          gettingStarted: "はじめに",
+          faq: "よくある質問",
+          privacy: "プライバシー",
+          contact: "お問い合わせ"
+        },
+        gettingStarted: {
+          title: "はじめに",
+          intro: "Foliozは、シンプルな複式簿記を使用して、現金、クレジット、投資を追跡するのに役立ちます。",
+          quickTips: "クイックヒント",
+          tip1: "アカウント（銀行、現金、クレジット）を作成して、取引の記録を開始します。",
+          tip2: "",
+          journal: "仕訳帳",
+          toReview: "を使用してエントリを確認し、",
+          reports: "レポート",
+          toSee: "で財務状況を確認します。",
+          tip3: "投資を追跡する場合は、銘柄を追加して",
+          unrealized: "未実現損益",
+          importExport: "インポート / エクスポート",
+          importExportText: "構造化されたファイル（例：JSON）を使用して、アプリとの間でデータを移動できるため、帳簿は持ち運び可能です。",
+          noteTitle: "ヒント：",
+          noteText: "特に大きな更新やデバイスの変更の前に、定期的なエクスポートをバックアップとして保持してください。"
+        },
+        contact: {
+          title: "お問い合わせ",
+          intro: "サポートが必要ですか？アプリのバージョンとデバイスモデルを含めてご連絡ください。",
+          email: "メール",
+          response: "返信",
+          responseText: "通常、数営業日以内に対応します。",
+          links: "リンク",
+          privacyPolicy: "プライバシーポリシー",
+          privacyPolicyUrl: "https://docs.google.com/document/d/19E-hPuWcNNPxPwXKy2aby2QfKth3tE-zFWyCbAVSXbM/edit?pli=1&tab=t.x5359cvwapi1"
+        },
+        faq: {
+          title: "よくある質問",
+          q1: "一般的な支出を記録するにはどうすればよいですか？",
+          a1: "複式簿記を使用します。費用アカウント（例：食費）を借方に記入し、現金またはクレジットカードアカウントを貸方に記入します。",
+          q2: "クレジットカードの追跡はどのように機能しますか？",
+          a2: "購入を費用として記録し、カードアカウントを貸方に記入します。請求書を支払う際は、カードアカウントを借方に記入し、銀行を貸方に記入します。",
+          q3: "データをインポート/エクスポートできますか？",
+          a3: "はい。Foliozは、帳簿を持ち運び可能で再利用可能に保つために、構造化されたインポート/エクスポート（JSONなど）をサポートしています。",
+          q4: "このアプリはiCloudを使用しますか？",
+          a4: "iCloud同期はオプションです。有効にすると、データはApple iCloudを介して同期されます。開発者はiCloudデータにアクセスしません。",
+          q5: "購入を復元するにはどうすればよいですか？",
+          a5: "アプリで設定を開き、「購入を復元」を使用します。購入時に使用したのと同じApple IDでサインインしていることを確認してください。"
+        },
+        privacy: {
+          title: "プライバシー",
+          intro: "Foliozは、個人の財務データを自分の管理下に置くように設計されています。ほとんどのデータはデバイスにローカルに保存されます。サードパーティサービス（例：広告）は、独自の目的で限られたデバイスデータを収集する場合があります。",
+          readFull: "完全なポリシーを読む："
+        },
+        footer: "Folioz. 全著作権所有。"
+      }
+    };
+
+    // 言語設定の読み込みと検出
+    const savedLang = localStorage.getItem('folioz-lang');
+    const userLang = navigator.language || navigator.userLanguage;
+    let currentLang = savedLang || (userLang.startsWith('ja') ? 'ja' : 'en');
+    
+    // 言語切り替え関数
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('folioz-lang', lang);
+      updateContent();
+      updateLangButtons();
+    }
+    
+    // 言語ボタンの状態を更新
+    function updateLangButtons() {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      });
+    }
+    
+    // コンテンツを更新
+    function updateContent() {
+      const t = translations[currentLang];
+
+      // ページタイトルと言語属性を更新
+      document.documentElement.lang = currentLang;
+      document.title = t.title;
+      document.querySelector('meta[name="description"]').content = t.tagline;
+
+      // ヘッダー
+      document.querySelector('h1').textContent = t.title;
+      document.querySelector('.tagline').textContent = t.tagline;
+
+      // ナビゲーション
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks[0].textContent = t.nav.gettingStarted;
+      navLinks[1].textContent = t.nav.faq;
+      navLinks[2].textContent = t.nav.privacy;
+      navLinks[3].textContent = t.nav.contact;
+
+      // Getting Started セクション
+      const gettingStartedSection = document.querySelector('#getting-started');
+      gettingStartedSection.querySelector('h2').textContent = t.gettingStarted.title;
+      gettingStartedSection.querySelector('.muted').textContent = t.gettingStarted.intro;
+      gettingStartedSection.querySelector('h3:nth-of-type(1)').textContent = t.gettingStarted.quickTips;
+      
+      const tips = gettingStartedSection.querySelectorAll('li');
+      tips[0].textContent = t.gettingStarted.tip1;
+      
+      tips[1].innerHTML = t.gettingStarted.tip2 + ' <span class="pill">' + t.gettingStarted.journal + 
+        '</span> ' + t.gettingStarted.toReview + ' <span class="pill">' + t.gettingStarted.reports + 
+        '</span> ' + t.gettingStarted.toSee;
+      
+      tips[2].innerHTML = t.gettingStarted.tip3 + ' <span class="pill">' + t.gettingStarted.unrealized + '</span>。';
+
+      gettingStartedSection.querySelector('h3:nth-of-type(2)').textContent = t.gettingStarted.importExport;
+      gettingStartedSection.querySelector('h3:nth-of-type(2)').nextElementSibling.textContent = t.gettingStarted.importExportText;
+      gettingStartedSection.querySelector('.note strong').textContent = t.gettingStarted.noteTitle;
+      gettingStartedSection.querySelector('.note strong').nextSibling.textContent = ' ' + t.gettingStarted.noteText;
+
+      // Contact セクション
+      const contactSection = document.querySelector('#contact');
+      contactSection.querySelector('h2').textContent = t.contact.title;
+      contactSection.querySelector('.muted').textContent = t.contact.intro;
+      
+      const kvItems = contactSection.querySelectorAll('.kv div');
+      kvItems[0].innerHTML = '<strong>' + t.contact.email + '</strong>';
+      kvItems[2].innerHTML = '<strong>' + t.contact.response + '</strong>';
+      kvItems[3].textContent = t.contact.responseText;
+      
+      contactSection.querySelector('h3').textContent = t.contact.links;
+      const contactPolicyLink = contactSection.querySelector('ul li a');
+      contactPolicyLink.textContent = t.contact.privacyPolicy;
+      contactPolicyLink.href = t.contact.privacyPolicyUrl;
+
+      // FAQ セクション
+      const faqSection = document.querySelector('#faq');
+      faqSection.querySelector('h2').textContent = t.faq.title;
+      
+      const faqDetails = faqSection.querySelectorAll('details');
+      faqDetails[0].querySelector('summary').textContent = t.faq.q1;
+      faqDetails[0].querySelector('.muted').innerHTML = t.faq.a1;
+      
+      faqDetails[1].querySelector('summary').textContent = t.faq.q2;
+      faqDetails[1].querySelector('.muted').innerHTML = t.faq.a2;
+      
+      faqDetails[2].querySelector('summary').textContent = t.faq.q3;
+      faqDetails[2].querySelector('.muted').innerHTML = t.faq.a3;
+      
+      faqDetails[3].querySelector('summary').textContent = t.faq.q4;
+      faqDetails[3].querySelector('.muted').innerHTML = t.faq.a4;
+      
+      faqDetails[4].querySelector('summary').textContent = t.faq.q5;
+      faqDetails[4].querySelector('.muted').innerHTML = t.faq.a5;
+
+      // Privacy セクション
+      const privacySection = document.querySelector('#privacy');
+      privacySection.querySelector('h2').textContent = t.privacy.title;
+      privacySection.querySelector('.muted').textContent = t.privacy.intro;
+      privacySection.querySelector('ul li').childNodes[0].textContent = t.privacy.readFull + ' ';
+      const privacyPolicyLink = privacySection.querySelector('ul li a');
+      privacyPolicyLink.textContent = t.contact.privacyPolicy;
+      privacyPolicyLink.href = t.contact.privacyPolicyUrl;
+
+      // フッター
+      document.querySelector('footer').innerHTML = '© <span id="year"></span> ' + t.footer;
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }
+    
+    // 言語ボタンのイベントリスナーを設定
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+    
+    // 初期化
+    updateContent();
+    updateLangButtons();
   </script>
 </body>
 </html>
