@@ -54,6 +54,12 @@
       background:var(--card); color:var(--text);
       box-shadow:0 2px 8px rgba(0,0,0,.08);
     }
+    .lang-select{
+      padding:6px 12px; border-radius:14px; background:transparent;
+      border:1px solid var(--border); color:var(--muted);
+      cursor:pointer; font-size:14px;
+    }
+    .lang-select:focus{ outline:none; box-shadow:0 2px 8px rgba(0,0,0,.08); }
     
     /* Hero */
     .hero{
@@ -200,8 +206,15 @@
           <h1>Folioz</h1>
         </div>
         <div class="lang-switch">
-          <button class="lang-btn active" data-lang="en">English</button>
-          <button class="lang-btn" data-lang="ja">日本語</button>
+          <label for="lang-select" class="sr-only">Language</label>
+          <select id="lang-select" class="lang-select" aria-label="Language">
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+          </select>
         </div>
       </div>
     </div>
@@ -457,6 +470,502 @@
     </section>
   </div>
 
+  <!-- German Content -->
+  <div id="content-de" class="lang-content hidden">
+    <section class="hero">
+      <div class="container">
+        <h2>Moderne persönliche Finanzen<br>mit Klarheit</h2>
+        <p>
+          Eine persönliche Finanz-App, die Ihnen hilft, Ihr Geld klar zu verstehen und zu verwalten — aufgebaut auf einem buchungsbasierten Ansatz inspiriert von der doppelten Buchführung.
+        </p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>Im App Store herunterladen</span>
+          <span>→</span>
+        </a>
+        <div class="hero-image">
+          <img src="Assets/Marketing_German/1-Hero.png" alt="Folioz App Hero" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Wichtige Funktionen</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>Persönliches Buchhaltungssystem</h3>
+            <p>Erfassen Sie Einnahmen, Ausgaben und Überweisungen in einem klaren, buchungsbasierten Format.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Ausgaben- &amp; Einnahmenverfolgung</h3>
+            <p>Organisieren Sie Transaktionen nach Konten und Kategorien, um Geldflüsse zu verstehen.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Konten- &amp; Saldenverwaltung</h3>
+            <p>Verfolgen Sie Kontostände über Bargeld, Bankkonten, Kreditkarten und mehr.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>Strukturiertes &amp; minimalistisches Design</h3>
+            <p>Eine ruhige, fokussierte Oberfläche, die hilft, sich auf das Wesentliche zu konzentrieren.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Flexibel im Alltag</h3>
+            <p>Ideal für einfache Haushaltsbudgets ebenso wie für strukturiertere Workflows.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Datenschutz steht an erster Stelle</h3>
+            <p>Ihre Daten bleiben auf Ihrem Gerät. Keine Registrierung, keine Werbung, kein Tracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots">
+      <div class="container">
+        <h2 class="section-title">Sehen Sie Folioz in Aktion</h2>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_German/2-HomeView.png" alt="Home View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_German/3-ReportsView.png" alt="Reports View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_German/4-Account.png" alt="Account View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_German/5-JSON.png" alt="JSON Export" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <h2 class="section-title">Für Klarheit designt</h2>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <div class="benefit-content">
+              <h3>Klare Einsicht</h3>
+              <p>Verstehen Sie, wie Transaktionen Ihre Salden beeinflussen.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔍</div>
+            <div class="benefit-content">
+              <h3>Vergangene Entscheidungen prüfen</h3>
+              <p>Blicken Sie auf Ihre Finanzhistorie zurück und lernen Sie aus Mustern.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-content">
+              <h3>Nachhaltige Gewohnheiten</h3>
+              <p>Bauen Sie langfristige Geldgewohnheiten auf strukturierter Basis auf.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-content">
+              <h3>Vollständiger Datenschutz</h3>
+              <p>Ihre Daten liegen lokal auf Ihrem Gerät. Volle Kontrolle über Ihre Finanzaufzeichnungen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Beginnen Sie mit finanzieller Klarheit</h2>
+        <p>Folioz bietet eine solide Grundlage, um Ihr Geld klar und gelassen zu verstehen.</p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>Folioz heute herunterladen</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- French Content -->
+  <div id="content-fr" class="lang-content hidden">
+    <section class="hero">
+      <div class="container">
+        <h2>Finances personnelles modernes<br>avec clarté</h2>
+        <p>
+          Une application de finances personnelles conçue pour vous aider à comprendre et gérer votre argent avec clarté, basée sur une approche de type comptabilité en partie double.
+        </p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>Télécharger sur l'App Store</span>
+          <span>→</span>
+        </a>
+        <div class="hero-image">
+          <img src="Assets/Marketing_French/1-Hero.png" alt="Folioz App Hero" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Fonctionnalités clés</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>Système de registre personnel</h3>
+            <p>Enregistrez revenus, dépenses et transferts dans un format clair inspiré de la comptabilité en partie double.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Suivi des dépenses et revenus</h3>
+            <p>Organisez les transactions par comptes et catégories pour comprendre les flux d'argent.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Gestion des comptes et soldes</h3>
+            <p>Suivez les soldes pour espèces, comptes bancaires, cartes de crédit et plus encore.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>Design structuré et minimal</h3>
+            <p>Interface calme et concentrée conçue pour réduire le bruit et favoriser l'essentiel.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Flexible pour un usage quotidien</h3>
+            <p>Adapté aux budgets simples comme aux workflows financiers plus structurés.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Confidentialité d'abord</h3>
+            <p>Vos données restent sur votre appareil. Pas d'inscription, pas de pub, pas de suivi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots">
+      <div class="container">
+        <h2 class="section-title">Découvrez Folioz en action</h2>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_French/2-HomeView.png" alt="Home View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_French/3-ReportsView.png" alt="Reports View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_French/4-Account.png" alt="Account View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_French/5-JSON.png" alt="JSON Export" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <h2 class="section-title">Conçu pour la clarté</h2>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <div class="benefit-content">
+              <h3>Compréhension claire</h3>
+              <p>Comprenez comment les transactions affectent vos soldes grâce à un suivi transparent.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔍</div>
+            <div class="benefit-content">
+              <h3>Revoir les décisions passées</h3>
+              <p>Revenez sur votre historique financier et apprenez de vos habitudes de dépenses.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-content">
+              <h3>Habitudes durables</h3>
+              <p>Construisez des habitudes financières à long terme basées sur la structure, pas sur les suppositions.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-content">
+              <h3>Confidentialité complète</h3>
+              <p>Les données sont stockées localement. Vous contrôlez vos enregistrements financiers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Commencez avec la clarté financière</h2>
+        <p>Folioz vous donne une base solide pour comprendre votre argent — clairement et sereinement.</p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>Télécharger Folioz aujourd'hui</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Korean Content -->
+  <div id="content-ko" class="lang-content hidden">
+    <section class="hero">
+      <div class="container">
+        <h2>명확한 개인 재무관리</h2>
+        <p>
+          복식부기 원리를 기반으로 한 개인 재무 앱으로, 자금을 명확히 이해하고 관리할 수 있도록 설계되었습니다.
+        </p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>App Store에서 다운로드</span>
+          <span>→</span>
+        </a>
+        <div class="hero-image">
+          <img src="Assets/Marketing_Korean/1-Hero.png" alt="Folioz 앱" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">주요 기능</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>개인 분개장 시스템</h3>
+            <p>수입, 지출 및 이체를 복식부기에서 영감을 받은 명확한 분개 형식으로 기록합니다.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>지출 및 수입 추적</h3>
+            <p>거래를 계좌와 카테고리별로 정리해 자금 흐름을 이해합니다.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>계좌 및 잔액 관리</h3>
+            <p>현금, 은행 계좌, 신용카드 등 계좌 잔액을 정확하게 추적합니다.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>구조적이고 미니멀한 디자인</h3>
+            <p>잡음을 줄이고 핵심에 집중할 수 있도록 설계된 차분한 UI.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>일상 사용에 유연</h3>
+            <p>간단한 가계부부터 구조화된 재무 워크플로까지 대응합니다.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>개인정보 보호를 우선</h3>
+            <p>데이터는 기기 내에 저장됩니다. 가입 불필요, 광고 없음, 추적 없음.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots">
+      <div class="container">
+        <h2 class="section-title">Folioz 사용 예시</h2>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Korean/2-HomeView.png" alt="Home View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Korean/3-ReportsView.png" alt="Reports View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Korean/4-Account.png" alt="Account View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Korean/5-JSON.png" alt="JSON Export" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <h2 class="section-title">명확성을 위한 설계</h2>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <div class="benefit-content">
+              <h3>명확한 이해</h3>
+              <p>거래가 잔액에 어떤 영향을 주는지 투명하게 이해할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔍</div>
+            <div class="benefit-content">
+              <h3>과거 결정 검토</h3>
+              <p>재무 이력을 되돌아보고 지출 패턴에서 배울 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-content">
+              <h3>지속 가능한 습관</h3>
+              <p>추측이 아닌 구조에 기반한 장기적인 재무 습관을 구축하세요.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-content">
+              <h3>완전한 개인정보 보호</h3>
+              <p>데이터는 로컬에 저장됩니다. 재무 기록을 완전히 제어하세요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>명확한 재무 관리를 시작하세요</h2>
+        <p>Folioz는 자금을 명확하고 차분하게 이해할 수 있는 토대를 제공합니다.</p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>지금 Folioz를 다운로드</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Traditional Chinese Content -->
+  <div id="content-zh-tw" class="lang-content hidden">
+    <section class="hero">
+      <div class="container">
+        <h2>以清晰呈現的現代個人理財</h2>
+        <p>
+          一款個人理財應用，旨在幫助您清楚理解並管理資金，基於類似複式簿記的分類帳方式構建。
+        </p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>於 App Store 下載</span>
+          <span>→</span>
+        </a>
+        <div class="hero-image">
+          <img src="Assets/Marketing_Chinese_traditional/1-Hero.png" alt="Folioz 應用" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">主要功能</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>個人分類帳系統</h3>
+            <p>使用類似複式簿記的方式，清楚記錄收入、支出與帳戶轉換。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>收支追蹤</h3>
+            <p>依帳戶與分類整理交易，理解資金流向。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>帳戶與餘額管理</h3>
+            <p>追蹤現金、銀行帳戶、信用卡等帳戶的餘額。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>結構化且極簡的設計</h3>
+            <p>沉靜且專注的介面，幫助您專注於重要事物。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>日常使用便利</h3>
+            <p>適用於簡單家計簿與更結構化的理財流程。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>隱私優先</h3>
+            <p>資料保存在您的裝置中，無需註冊，無廣告，無追蹤。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots">
+      <div class="container">
+        <h2 class="section-title">實際畫面</h2>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Chinese_traditional/2-HomeView.png" alt="Home View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Chinese_traditional/3-ReportsView.png" alt="Reports View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Chinese_traditional/4-Account.png" alt="Account View" loading="lazy">
+          </div>
+          <div class="screenshot-item">
+            <img src="Assets/Marketing_Chinese_traditional/5-JSON.png" alt="JSON Export" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <h2 class="section-title">以清晰為設計原則</h2>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <div class="benefit-content">
+              <h3>清晰理解</h3>
+              <p>以透明的分類帳方式理解交易如何影響您的餘額。</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔍</div>
+            <div class="benefit-content">
+              <h3>回顧過去決策</h3>
+              <p>檢視財務歷史並從消費模式中學習。</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-content">
+              <h3>永續習慣</h3>
+              <p>建立以結構為基礎的長期理財習慣。</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-content">
+              <h3>完整隱私</h3>
+              <p>資料儲存在本機，您掌握所有財務紀錄。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>開始建構財務清晰度</h2>
+        <p>Folioz 提供穩固基礎，讓您以清晰且從容的方式理解資金。</p>
+        <a href="https://apps.apple.com/us/app/folioz/id6757133007" class="cta-btn">
+          <span>立即下載 Folioz</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
   <footer>
     <div class="container">
       <p>© <span id="year"></span> Folioz. All rights reserved.</p>
@@ -472,52 +981,62 @@
     // Set year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Language switcher
-    const langButtons = document.querySelectorAll('.lang-btn');
-    const contentEn = document.getElementById('content-en');
-    const contentJa = document.getElementById('content-ja');
+    // Language switcher (dropdown)
+    const langSelect = document.getElementById('lang-select');
+    const langContents = document.querySelectorAll('.lang-content');
+
+    const titles = {
+      'en': 'Folioz - Modern Personal Finance App',
+      'ja': 'Folioz - シンプルな個人財務管理アプリ',
+      'de': 'Folioz - Moderne persönliche Finanz-App',
+      'fr': 'Folioz - Application de finances personnelles moderne',
+      'ko': 'Folioz - 현대적인 개인 재무 앱',
+      'zh-tw': 'Folioz - 現代個人理財應用程式'
+    };
 
     function switchLanguage(lang) {
-      if (lang === 'en') {
-        contentEn.classList.remove('hidden');
-        contentJa.classList.add('hidden');
-        document.documentElement.lang = 'en';
-        document.title = 'Folioz - Modern Personal Finance App';
-      } else {
-        contentEn.classList.add('hidden');
-        contentJa.classList.remove('hidden');
-        document.documentElement.lang = 'ja';
-        document.title = 'Folioz - シンプルな個人財務管理アプリ';
-      }
+      // Hide all contents
+      langContents.forEach(el => el.classList.add('hidden'));
 
-      // Update button states
-      langButtons.forEach(btn => {
-        if (btn.dataset.lang === lang) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
+      // Show selected
+      const active = document.getElementById('content-' + lang);
+      if (active) active.classList.remove('hidden');
+
+      // Set page lang attribute (use canonical casing for zh-TW)
+      if (lang === 'zh-tw') document.documentElement.lang = 'zh-TW';
+      else document.documentElement.lang = lang;
+
+      // Update title
+      document.title = titles[lang] || titles['en'];
+
+      // Update select value
+      if (langSelect) langSelect.value = lang;
 
       // Save preference
       localStorage.setItem('folioz-lang', lang);
     }
 
-    // Add click handlers
-    langButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        switchLanguage(btn.dataset.lang);
+    // Add change handler for select
+    if (langSelect) {
+      langSelect.addEventListener('change', () => {
+        switchLanguage(langSelect.value);
       });
-    });
-
-    // Check for saved preference or browser language
-    const savedLang = localStorage.getItem('folioz-lang');
-    const browserLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
-    const initialLang = savedLang || browserLang;
-
-    if (initialLang === 'ja') {
-      switchLanguage('ja');
     }
+
+    // Detect initial language: saved -> navigator -> fallback to en
+    const savedLang = localStorage.getItem('folioz-lang');
+    let browserLang = 'en';
+    const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+
+    if (nav.startsWith('ja')) browserLang = 'ja';
+    else if (nav.startsWith('de')) browserLang = 'de';
+    else if (nav.startsWith('fr')) browserLang = 'fr';
+    else if (nav.startsWith('ko')) browserLang = 'ko';
+    else if (nav.startsWith('zh')) browserLang = 'zh-tw';
+
+    const initialLang = savedLang || browserLang || 'en';
+    if (langSelect) langSelect.value = initialLang;
+    switchLanguage(initialLang);
   </script>
 </body>
 </html>
